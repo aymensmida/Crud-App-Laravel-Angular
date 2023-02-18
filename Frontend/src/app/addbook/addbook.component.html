@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <form [formGroup]="reactiveForm" #form="ngForm" (ngSubmit)="submit()">
+      <div class="form-row">
+        <label class=" font-weight-bolder">Title</label>
+        <input class="form-control" type="text" id="title" name="title" formControlName="title"
+        [class.is-invalid]="f.title.invalid && (f.title.dirty || f.title.touched)">
+        <div *ngIf="f.title.invalid && (f.title.dirty || f.title.touched)" class="invalid-feedback">
+          <div *ngIf="f.title.errors?.['required']">
+            This field is required.
+          </div>
+          <div *ngIf="f.title.errors?.['minlength']">
+            This field must have at least 1 character.
+          </div>
+          <div *ngIf="f.title.errors?.['maxlength']">
+            This field must have at most 250 characters.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <label class=" font-weight-bolder">Author</label>
+        <input class="form-control" type="text" id="author" name="author" formControlName="author"
+        [class.is-invalid]="f.author.invalid && (f.author.dirty || f.author.touched)">
+        <div *ngIf="f.author.invalid && (f.author.dirty || f.author.touched)" class="invalid-feedback">
+          <div *ngIf="f.author.errors?.['required']">
+            This field is required.
+          </div>
+          <div *ngIf="f.author.errors?.['minlength']">
+            This field must have at least 1 character.
+          </div>
+          <div *ngIf="f.author.errors?.['maxlength']">
+            This field must have at most 250 characters.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <label class=" font-weight-bolder">Price</label>
+        <input class="form-control" type="text" id="price" name="price" formControlName="price"
+        [class.is-invalid]="f.price.invalid && (f.price.dirty || f.price.touched)">
+        <div *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" class="invalid-feedback">
+          <div *ngIf="f.price.errors?.['required']">
+            This field is required.
+          </div>
+          <div *ngIf="f.price.errors?.['minlength']">
+            This field must have at least 1 character.
+          </div>
+          <div *ngIf="f.price.errors?.['maxlength']">
+            This field must have at most 250 characters.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <label class=" font-weight-bolder">Description</label>
+        <input class="form-control" type="text" id="description" name="description" formControlName="description">
+
+      </div>
+      <button class="btn btn-primary mt-5" type="submit" [disabled]="!reactiveForm.valid">Submit</button>
+
+</form>
+  </div>
+</div>
