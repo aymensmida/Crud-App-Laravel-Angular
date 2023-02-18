@@ -1,5 +1,5 @@
 # Crud-App-Laravel-Angular
-Crud Application (Single Page Application ) with laravel and angular
+Crud Application (Single Page Application ) with Laravel v8 and Angular v13
 
 ## Installation
 
@@ -54,7 +54,15 @@ cd Crud-App-Laravel-Angular/Frontend
 ```
 npm install
 ``` 
-8- Run Angular Project:
+10- Run Angular Project:
 ```
 ng serve
 ```
+
+Then go to `http://localhost:4200/` from your browser and see the app.
+
+## Technologies Used
+
+- PHP Laravel Framework v8
+- Angular v13
+- Bootstrap v4.6
